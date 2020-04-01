@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script type="text/javascript">
+           function calculate(){
+             var p=0;
+             var y=0;
+             var r=0;
+             var SI=0;
+             
+
+             p = parseInt(document.getElementById("principal").value);
+             y = parseInt(document.getElementById("years").value);
+             r = parseInt(document.getElementById("rate").value);
+             
+             SI = (p*y*r)/100;
+             document.getElementById("res").innerHTML=SI;
+
+           }
+
+           function displayAlert(){
+
+               alert("message succesful sent");
+
+              
+           }
+        
+         document.getElementById("newbutton").addEventListener("click" ,displayAlert);
+        
+        
+        </script>
+    </head>
+    <body>
+<div class="container">
+    <div class="row">
+       <div class="col-md-12" >
+           <h1>Simple Interest Calculator</h1>
+       </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label class="form-group">principal</label>
+                    <input class="label-control" type="text" id="principal">
+                </div>
+                <div class="form-group">
+                    <label class="form-group">years</label>
+                    <input class="label-control" type="text" id="years">
+                </div>
+                <div class="form-group">
+                    <label class="form-group">rate of Interest</label>
+                    <input class="label-control" type="text" id="rate">
+                </div>
+                      <button class=" btn btn-primary" type="button" id="newbutton" onclick="calculate()">Calculate</button>
+            </form>
+        </div>
+    </div>
+              <div class="row">
+                  <div class="col-md-12">
+                      <h1 id="res"> $  </h1>
+                  </div>
+              </div>
+</div>
+
+
+
+
+    </body>
+</html>
+
+
+<!-- 
+edwin oyunge -->
